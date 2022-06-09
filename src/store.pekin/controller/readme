@@ -1,0 +1,17 @@
+1、Subject
+    主体。每个用户登录后都会对应一个Subject对象，所有用户信息都存放在Subject中。可以理解：Subject就是Shiro提供的用户实体类
+2、Security Manager
+    Shiro最大的容器，此容器中包含了Shiro的绝大多数功能，在非SpringBoot项目中，获得Security Manager 是编写代码的第一步。在SpringBoot中已经帮助我们自动化配置了
+3、Authenticator
+    认证器，执行认证过程调用的组件。里面包含了认证策略
+4、Authorizer
+    授权器。执行授权时调用的组件
+5、Session Manager
+    Shiro被Web集成后，HttpSession对象会由Shiro的Session Manager进行管理。
+6、Cache Manager
+    缓存管理。Shiro执行很多第三方缓存技术。例如EHCache等
+7、Session DAO
+    操作Session内容的组件
+8、Realms
+    Shiro框架实现权限控制不依赖与数据库，通过内置数据也可以实现权限控制。但是目前绝大多数应用的数据都存储在数据库中，所以shiro提供Realms组件，
+    此组件的作用就是访问数据库。Shiro内置访问数据库代码，通过简单配置就可以访问数据库，也可以自定义Realms实现访问数据库逻辑
